@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {getWindowSize} from "../../api/wdaApi";
-import {selectSession} from "../wdaSession/wdaSessionSlice";
+import { getWindowSize } from "../../api/wdaApi";
+import { selectSession } from "../wdaSession/wdaSessionSlice";
 
 export const screenSessionSlice = createSlice({
   name: 'screenSession',
