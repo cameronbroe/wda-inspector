@@ -1,0 +1,12 @@
+#screenStreamContainer {
+  height: 100vh;
+  max-height: 100vh;
+  padding: 0 20px;
+  display: flex;
+}
+
+#screenStream {
+  max-height: 100vh;
+  display: block;
+  align-self: center;
+}
