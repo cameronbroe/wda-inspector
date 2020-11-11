@@ -1,5 +1,5 @@
 import nock from "nock";
-import { createSession, getWindowSize } from "./wdaApi";
+import { createSession, getWindowSize, getElementTree } from "./wdaApi";
 
 describe('wdaAPI', () => {
   it('should create a session with default caps', async () => {
@@ -30,6 +30,22 @@ describe('wdaAPI', () => {
 
     let size = await getWindowSize('test-session-id');
     expect(size).toEqual(expectedSize);
+    scope.done();
+  });
+
+  it('should get the element tree', async () => {
+    const expectedTree = {
+      value: {}
+    }
+
+    const scope = nock('http://localhost:8100/')
+      .get('/source?format=json')
+      .reply(200, expectedTree, {
+        "Access-Control-Allow-Origin": "*"
+      });
+
+    let tree = await getElementTree();
+    expect(tree).toEqual(expectedTree);
     scope.done();
   });
 });

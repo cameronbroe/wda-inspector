@@ -1,0 +1,6 @@
+#elementTreeContainer {
+  background-color: #21252B;
+  max-height: 100vh;
+  flex-grow: 1;
+  padding: 15px 0;
+}

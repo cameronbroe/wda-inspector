@@ -3,6 +3,8 @@ import './App.css';
 import ScreenStream from "./features/screenStream/ScreenStream";
 import {useDispatch} from "react-redux";
 import {startSession} from "./features/wdaSession/wdaSessionSlice";
+import ElementTree from "./features/elementTree/ElementTree";
+import NodeViewer from "./features/elementTree/NodeViewer";
 
 function App() {
   const dispatch = useDispatch();
@@ -10,6 +12,8 @@ function App() {
   return (
     <div className="App">
       <ScreenStream />
+      <ElementTree />
+      <NodeViewer />
     </div>
   );
 }

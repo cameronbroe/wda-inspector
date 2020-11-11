@@ -12,8 +12,10 @@
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.1",
     "react-scripts": "3.4.3",
+    "react-treebeard": "^3.2.4",
     "redux-mock-store": "^1.5.4",
-    "uri-js": "^4.4.0"
+    "uri-js": "^4.4.0",
+    "uuid": "^8.3.1"
   },
   "scripts": {
     "start": "react-scripts start",

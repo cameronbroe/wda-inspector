@@ -20,3 +20,8 @@ export const getWindowSize = async (sessionId) => {
   const res = await fetch(`${baseUrl}/session/${sessionId}/window/size`);
   return await res.json();
 }
+
+export const getElementTree = async () => {
+  const res = await fetch(`${baseUrl}/source?format=json`);
+  return await res.json();
+}
